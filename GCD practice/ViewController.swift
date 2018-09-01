@@ -52,7 +52,6 @@ class ViewController: UIViewController {
                 print(self.label3.text)
             }
             
-            self.semaphore.signal()
         }
     }
 }
