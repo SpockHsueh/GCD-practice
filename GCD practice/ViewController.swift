@@ -24,32 +24,36 @@ class ViewController: UIViewController {
     }
     
     func Semaphore() {
-        for i in 1...100{
+        
+        let loadingQueue = DispatchQueue.global()
+
+        loadingQueue.async {
             
             self.semaphore.wait()
             self.client.getNameData { (data, error) in
-                self.label1.text = data!
-                print(self.label1.text)
+                if error == nil {
+                    self.label1.text = data!
+                    print(self.label1.text)
+                    self.semaphore.signal()
+                }
             }
-            self.semaphore.signal()
             
             self.semaphore.wait()
             self.client.getAddressData { (data, error) in
                 self.label2.text = data!
-                self.semaphore.signal()
                 print(self.label2.text)
+                self.semaphore.signal()
+
             }
-            self.semaphore.signal()
             
             self.semaphore.wait()
             self.client.getHeadData { (data, error) in
                 self.label3.text = data!
-                self.semaphore.signal()
                 print(self.label3.text)
             }
+            
             self.semaphore.signal()
         }
-  
     }
 }
 
