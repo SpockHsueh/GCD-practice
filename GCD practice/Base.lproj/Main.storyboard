@@ -69,17 +69,37 @@
                                     <constraint firstAttribute="height" constant="90" id="qrI-uC-9ZQ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-zW-fpH">
+                                <rect key="frame" x="55" y="541" width="79" height="30"/>
+                                <state key="normal" title="Semaphore"/>
+                                <connections>
+                                    <action selector="semaphore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1UA-Qx-0zK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCD-WA-kmG">
+                                <rect key="frame" x="277" y="541" width="43" height="30"/>
+                                <state key="normal" title="Group"/>
+                                <connections>
+                                    <action selector="group:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucm-yU-7RO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J0O-6H-jMx" firstAttribute="top" secondItem="twX-2c-GCg" secondAttribute="bottom" constant="36" id="3ME-AH-H21"/>
+                            <constraint firstItem="2lq-zW-fpH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="44e-DP-Sym"/>
                             <constraint firstItem="twX-2c-GCg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="4To-6s-Zru"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2lq-zW-fpH" secondAttribute="bottom" constant="96" id="Io1-Sk-VKL"/>
                             <constraint firstItem="mzk-Qi-OF6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kx8-5J-JtL"/>
                             <constraint firstItem="twX-2c-GCg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oxu-1C-W5q"/>
+                            <constraint firstItem="2lq-zW-fpH" firstAttribute="top" secondItem="mzk-Qi-OF6" secondAttribute="bottom" constant="99" id="SsI-0P-5a0"/>
                             <constraint firstItem="twX-2c-GCg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ToT-I7-R9p"/>
                             <constraint firstItem="mzk-Qi-OF6" firstAttribute="top" secondItem="J0O-6H-jMx" secondAttribute="bottom" constant="36" id="dMb-jq-0aG"/>
                             <constraint firstItem="mzk-Qi-OF6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="duw-1s-4EQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WCD-WA-kmG" secondAttribute="bottom" constant="96" id="ewT-m0-IOd"/>
                             <constraint firstItem="J0O-6H-jMx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hlN-Tk-SfZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WCD-WA-kmG" secondAttribute="trailing" constant="55" id="pu2-sZ-IKb"/>
+                            <constraint firstItem="WCD-WA-kmG" firstAttribute="top" secondItem="mzk-Qi-OF6" secondAttribute="bottom" constant="99" id="rtJ-yu-Ez5"/>
                             <constraint firstItem="J0O-6H-jMx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tu3-D2-T8r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
