@@ -1,11 +1,11 @@
 # GCD: Waiting for Data using DispatchGroup and Semaphores
 
->###The majority of apps make networking requests, and depending on the app, you may need to call multiple apis at the same time. As opposed to chaining your calls in a synchronous manner, which is much slower, you can add them to the dispatch group and call them at the same time to increase the performance of your app.
+>### The majority of apps make networking requests, and depending on the app, you may need to call multiple apis at the same time. As opposed to chaining your calls in a synchronous manner, which is much slower, you can add them to the dispatch group and call them at the same time to increase the performance of your app.
 
 ***
 
 # Part1. DispatchGroup
->###In this app, I used three APIs to crawl the data and present them on the screen. Through DispatchGroup, I can control each API separately. When the network successfully grabs the data, I will proceed to the next API. Actions.
+>### In this app, I used three APIs to crawl the data and present them on the screen. Through DispatchGroup, I can control each API separately. When the network successfully grabs the data, I will proceed to the next API. Actions.
 
 ###To use DispatchGroup is very easy, we just need         dispatchGroup.enter() and dispatchGroup.leave() 
 ###In the task to join the group, use .enter(), add the .leave() after use completion
