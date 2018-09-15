@@ -46,9 +46,9 @@
 # Part2. Semaphores
 >### Three steps:
 >1. Whenever we would like to use one shared resource, we send a request to its semaphore;
-2. Once the semaphore gives us the green light (see what I did here?) we can assume that the resource is ours and we can use it;
-3. Once the resource is no longer necessary, we let the semaphore know by sending him a signal, allowing him to assign the resource to another thread. 
-4. Can think of these request/signal as the resource lock/unlock.
+>2. Once the semaphore gives us the green light (see what I did here?) we can assume that the resource is ours and we can use it;
+>3. Once the resource is no longer necessary, we let the semaphore know by sending him a signal, allowing him to assign the resource to another thread. 
+>4. Can think of these request/signal as the resource lock/unlock.
 
 
 ## What’s Happening Behind the Scenes
@@ -56,13 +56,13 @@
 #### When the semaphore receives a request, it checks if its counter is above zero: 
 
 >- if yes, then the semaphore decrements it and gives the thread the green light;
-- otherwise it pushes the thread at the end of its queue;
+>- otherwise it pushes the thread at the end of its queue;
 
 ### Resource Release: signal()
 #### Once the semaphore receives a signal, it checks if its FIFO queue has threads in it:
 
 >- if yes, then the semaphore pulls the first thread and give him the green light;
-- otherwise it increments its counter;
+>- otherwise it increments its counter;
 
 ### Warning: If you do this in the main thread, the whole app will freeze 
 
